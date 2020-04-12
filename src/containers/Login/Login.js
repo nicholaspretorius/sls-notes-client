@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { Auth } from "aws-amplify";
 import "./Login.css";
@@ -46,6 +47,7 @@ export default function Login() {
           <ControlLabel>Password</ControlLabel>
           <FormControl value={fields.password} onChange={handleFieldChange} type="password" />
         </FormGroup>
+        <Link to="/reset-password">Forgot password?</Link>
         <LoaderButton
           block
           type="submit"
