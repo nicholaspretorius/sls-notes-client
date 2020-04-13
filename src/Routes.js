@@ -12,6 +12,8 @@ import Note from "./containers/Note/Note";
 import Settings from "./containers/Settings/Settings";
 import Billing from "./containers/Billing/Billing";
 import ResetPassword from "./containers/ResetPassword/ResetPassword";
+import ChangePassword from "./containers/ChangePassword/ChangePassword";
+import ChangeEmail from "./containers/ChangeEmail/ChangeEmail";
 
 export default function Routes() {
   return (
@@ -33,6 +35,12 @@ export default function Routes() {
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/settings/billing">
         <Billing />
+      </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/settings/change-password">
+        <ChangePassword />
+      </AuthenticatedRoute>
+      <AuthenticatedRoute exact path="/settings/change-email">
+        <ChangeEmail />
       </AuthenticatedRoute>
       <AuthenticatedRoute exact path="/notes/new">
         <NewNote />
