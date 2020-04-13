@@ -13,7 +13,7 @@ export default function Settings() {
           Update Email
         </LoaderButton>
       </LinkContainer>
-      <LinkContainer to="/settings/password">
+      <LinkContainer to="/settings/change-password">
         <LoaderButton block bsSize="large">
           Update Password
         </LoaderButton>
