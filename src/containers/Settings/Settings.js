@@ -8,7 +8,7 @@ import "./Settings.css";
 export default function Settings() {
   return (
     <div className="Settings">
-      <LinkContainer to="/settings/email">
+      <LinkContainer to="/settings/change-email">
         <LoaderButton block bsSize="large">
           Update Email
         </LoaderButton>
