@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { logError } from "./../../libs/errorLib";
 import "./ErrorBoundary.css";
 
+// TODO: Add Sentry releases and sourcemaps.
+// Sourcemaps: https://docs.sentry.io/platforms/javascript/sourcemaps/
+// Releases: https://docs.sentry.io/workflow/releases/?platform=javascript
+
 export default class ErrorBoundary extends Component {
   state = { hasError: false };
 
