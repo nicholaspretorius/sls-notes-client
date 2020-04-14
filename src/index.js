@@ -7,6 +7,9 @@ import App from "./App";
 import config from "./config";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
+import { initSentry } from "./libs/errorLib";
+
+initSentry();
 
 Amplify.configure({
   Auth: {

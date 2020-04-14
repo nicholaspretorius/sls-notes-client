@@ -6,13 +6,14 @@ import { Auth } from "aws-amplify";
 
 import { AppContext } from "./libs/contextLib";
 import Routes from "./Routes";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import "./App.css";
 
 function App(props) {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [isAuthenticating, setIsAuthenticating] = useState(true);
 
-  console.log("STAGE: ", process.env.REACT_APP_STAGE);
+  console.log("STAGE: ", process.env.REACT_APP_STAGE, " ENV: ", process.env.NODE_ENV);
 
   useEffect(() => {
     onLoad();
@@ -70,9 +71,11 @@ function App(props) {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-          <Routes />
-        </AppContext.Provider>
+        <ErrorBoundary>
+          <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+            <Routes />
+          </AppContext.Provider>
+        </ErrorBoundary>
       </div>
     )
   );
