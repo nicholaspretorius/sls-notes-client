@@ -6,6 +6,10 @@
 Sentry.init({dsn: "https://c695c3e948c248e5a063f36dde5abeff@o303154.ingest.sentry.io/5199988"});
 ```
 
+Read more about setting up Sentry releases and sourcemaps [here](https://medium.com/@vshab/create-react-app-and-sentry-cde1f15cbaa)
+
+### Orignial Create React App README
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
