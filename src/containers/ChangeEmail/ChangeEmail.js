@@ -7,10 +7,12 @@ import { useFormFields } from "./../../libs/hooksLib";
 import "./ChangeEmail.css";
 
 export default function ChangeEmail() {
+  // TODO: Add user to app context
   // TODO: Check for unverified changes
   // TODO: Resend code if unverified:
   // https://serverless-stack.com/chapters/allow-users-to-change-their-email.html
   const history = useHistory();
+  //const user = await Auth.currentAuthenticatedUser();
   const [isCodeSending, setIsCodeSending] = useState(false);
   const [isCodeSent, setIsCodeSent] = useState(false);
   const [isConfirming, setIsConfirming] = useState(false);
