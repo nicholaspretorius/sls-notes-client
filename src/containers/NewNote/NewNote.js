@@ -24,7 +24,7 @@ export default function NewNote() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log("File Size: ", file.current.size, " Max File Size: ", config.MAX_ATTACHMENT_SIZE);
+    // console.log("File Size: ", file.current.size, " Max File Size: ", config.MAX_ATTACHMENT_SIZE);
     if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
       alert(`Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE / 1000000} MB.`);
       return;
